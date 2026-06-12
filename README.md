@@ -1,4 +1,4 @@
-<!-- =========================
+<img src="imagenes/tornado.jpg" alt="Tornado"><!-- =========================
      CARRUSEL DE IMÁGENES
 ========================= -->
 <div class="slider">
