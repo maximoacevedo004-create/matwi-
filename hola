@@ -1,0 +1,61 @@
+<body>
+
+<header>
+    <h1>🌪 Tornados F4 y F5</h1>
+    <p>Busca cualquier tornado por su nombre o ciudad.</p>
+    <input type="text" id="buscar" placeholder="Buscar tornado..." onkeyup="filtrar()">
+</header>
+
+<!-- CARRUSEL DE IMÁGENES -->
+<div class="slider">
+    <img id="foto" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tornado_Elie_Manitoba_2007.jpg">
+</div>
+
+<!-- AQUÍ EMPIEZAN LAS TARJETAS -->
+<div class="contenedor" id="lista">
+
+    <div class="tarjeta">
+        <h2>El Reno (2011)</h2>
+        <p><b>Categoría:</b> EF5</p>
+        <p><b>Vientos:</b> 476 km/h</p>
+    </div>
+
+    <div class="tarjeta">
+        <h2>Joplin (2011)</h2>
+        <p><b>Categoría:</b> EF5</p>
+        <p><b>Vientos:</b> 320 km/h</p>
+    </div>
+
+</div>
+
+<script>
+let imagenes = [
+"https://upload.wikimedia.org/wikipedia/commons/5/56/Tornado_Elie_Manitoba_2007.jpg",
+"https://upload.wikimedia.org/wikipedia/commons/4/4b/Supercell_thunderstorm.jpg",
+"https://upload.wikimedia.org/wikipedia/commons/f/f4/Tornado_near_Elie_Manitoba.jpg"
+];
+
+let numero = 0;
+
+setInterval(function(){
+    numero++;
+    if(numero >= imagenes.length){
+        numero = 0;
+    }
+    document.getElementById("foto").src = imagenes[numero];
+}, 4000);
+</script>
+
+</body>.slider{
+    width:95%;
+    max-width:1000px;
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.slider img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
